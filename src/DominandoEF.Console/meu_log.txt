@@ -1,0 +1,68 @@
+warn: 21/05/2021 09:44:04.177 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+info: 21/05/2021 09:44:04.425 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+dbug: 21/05/2021 09:44:04.512 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Departamento>()
+          .Where(p => p.Id > 0)'
+dbug: 21/05/2021 09:44:04.792 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Departamento>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Departamento.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Departamento.Ativo (bool) Required, 1], [Property: Departamento.Descricao (string), 2], [Property: Departamento.Excluido (bool) Required, 3], }
+              SELECT d.Id, d.Ativo, d.Descricao, d.Excluido
+              FROM Departamentos AS d
+              WHERE d.Id > 0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Departamento>, 
+          DominandoEF.Data.ApplicationContext, 
+          False, 
+          False
+      )'
+dbug: 21/05/2021 09:44:04.884 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 21/05/2021 09:44:04.894 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (48ms).
+dbug: 21/05/2021 09:44:04.899 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'DominandoEF' on server 'BUFAONANET'.
+dbug: 21/05/2021 09:44:05.268 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'DominandoEF' on server 'BUFAONANET'.
+dbug: 21/05/2021 09:44:05.276 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
+info: 21/05/2021 09:44:05.328 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
+dbug: 21/05/2021 09:44:05.393 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'Departamento' entity with key '{Id: 1}'.
+dbug: 21/05/2021 09:44:05.433 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'Departamento' entity with key '{Id: 2}'.
+dbug: 21/05/2021 09:44:05.433 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'Departamento' entity with key '{Id: 3}'.
+dbug: 21/05/2021 09:44:05.433 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'Departamento' entity with key '{Id: 4}'.
+dbug: 21/05/2021 09:44:05.433 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'ApplicationContext' started tracking 'Departamento' entity with key '{Id: 5}'.
+dbug: 21/05/2021 09:44:05.441 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 21/05/2021 09:44:05.443 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'DominandoEF' on server 'BUFAONANET'.
+dbug: 21/05/2021 09:44:05.451 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'DominandoEF' on server 'BUFAONANET'.
+dbug: 21/05/2021 09:44:05.452 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'ApplicationContext' disposed.
+warn: 21/05/2021 09:45:01.238 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+info: 21/05/2021 09:45:01.397 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.6 initialized 'ApplicationContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: SensitiveDataLoggingEnabled 
+info: 21/05/2021 09:45:02.006 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[Id], [d].[Ativo], [d].[Descricao], [d].[Excluido]
+      FROM [Departamentos] AS [d]
+      WHERE [d].[Id] > 0
